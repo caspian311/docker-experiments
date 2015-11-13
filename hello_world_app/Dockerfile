@@ -1,9 +1,11 @@
-FROM rails_app:1.0
+FROM caspian311/rails_server:1.0
+
+RUN mkdir /app
 
 ADD Gemfile.lock /app
 ADD Gemfile /app
 
-RUN bundle install --without development test
+RUN cd /app && bundle install --without development test
 
 ADD . /app
 
