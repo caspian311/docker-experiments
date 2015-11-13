@@ -3,6 +3,11 @@ FROM ubuntu:14.04
 RUN apt-get update && apt-get install -y \
 	software-properties-common \
 	make \
+	patch \
+	zlib1g-dev \
+	libxslt-dev \
+	libxml2-dev \
+	liblzma-dev \
 	zlib1g-dev \
 	libmysqlclient-dev \
 	mysql-client-5.5 
