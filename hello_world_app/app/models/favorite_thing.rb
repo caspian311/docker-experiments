@@ -1,2 +1,2 @@
-class FavoriteThing < ActiveRecord::Model
+class FavoriteThing < ActiveRecord::Base
 end
