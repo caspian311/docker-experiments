@@ -1,11 +1,12 @@
 FROM caspian311/rails_server:1.0
 
-RUN mkdir /app
+ENV APP_HOME /app
+RUN mkdir $APP_HOME
+WORKDIR $APP_HOME
 
-ADD Gemfile.lock /app
-ADD Gemfile /app
+ADD Gemfile* $APP_HOME/
 
-RUN cd /app && bundle install --without development test
+RUN bundle install --without development test
 
-ADD . /app
+ADD . $APP_HOME
 
