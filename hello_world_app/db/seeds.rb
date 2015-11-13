@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+FavoriteThing.create!(name: 'Wife')
+FavoriteThing.create!(name: 'Oreos')
+FavoriteThing.create!(name: 'Milk')
