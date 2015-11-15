@@ -16,5 +16,5 @@ So this is my attempt at using Docker images. This is a simple Rails app that us
     
 ###Hit the server
 
-    open http://docker-stuff:3000
+    open http://localhost:3000
 
