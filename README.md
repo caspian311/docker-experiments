@@ -10,9 +10,10 @@ So this is my attempt at using Docker images. This is a simple Rails app that us
 
     docker build -t caspian311/hello_world:1.0 hello_world_app
 
-###Start-up the rails app
+###Start-up the rails app with log files outside of the container:
 
-    docker run --net=host -d -P caspian311/hello_world:1.0
+    log_path=$(mkdir -p logging ; pushd logging &> /dev/null; echo pwd; popd &> /dev/null)
+    docker run --net=host  -v $log_path:/var/log/app -d -P caspian311/hello_world:1.0
     
 ###Hit the server
 

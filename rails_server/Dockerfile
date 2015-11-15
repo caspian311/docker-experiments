@@ -19,3 +19,7 @@ RUN apt-get update && apt-get install -y \
 	ruby2.2-dev
 
 RUN gem install bundler --no-rdoc --no-ri
+
+EXPOSE 3000
+CMD bundle exec unicorn -c config/unicorn.rb
+
