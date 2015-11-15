@@ -11,7 +11,11 @@ RUN bundle install --without development test
 ADD . $APP_HOME
 
 ENV RAILS_ENV production
-RUN bundle exec rake db:drop db:create db:migrate db:seed
+ENV DB_DATABASE hello_world
+ENV DB_USER hello_world
+ENV DB_PASSWORD secret
+ENV DB_HOST 172.17.0.1
+RUN bundle exec rake db:create db:migrate db:seed
 
 EXPOSE 3000
 CMD ["bundle", "exec", "rails", "s"]

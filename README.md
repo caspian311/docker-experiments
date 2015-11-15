@@ -12,7 +12,7 @@ So this is my attempt at using Docker images. This is a simple Rails app that us
 
 ###Start-up the rails app
 
-    docker run -d -P caspian311/hello_world:1.0
+    docker run --net=host -d -P caspian311/hello_world:1.0
     
 ###Hit the server
 
