@@ -15,6 +15,6 @@ stderr_path "/var/log/app/out.log"
 stdout_path "/var/log/app/err.log"
 
 # Set master PID location
-pid "/var/log/app/app.pid"
+#pid "/var/log/app/app.pid"
 
 
